@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Centralizado com wrap_content -->
+    <TextView
+        android:id="@+id/textview_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World A!"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Centralizado com wrap_content -->
+    <TextView
+        android:id="@+id/textview_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World B!"
+        android:textSize="22sp"
+        app:layout_constraintCircle="@id/textview_A"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="128dp"
+        app:layout_constraintTop_toTopOf="@+id/textview_A"
+        app:layout_constraintStart_toStartOf="@+id/textview_A"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+     *** Circle
+
+Esses três atributos permitem posicionar uma View em volta de outra, num esquema circular:
+Ainda necessita criar as constraints. (Ex: Top_toTopOf e Start_toStartOf)
+
+- app:layout_constraintCircle
+    - Especifica o ID da View que será o centro do círculo.
+    - É a referência ao redor da qual sua View “gira”.
+
+- app:layout_constraintCircleRadius
+    - Define o raio (distância) entre o centro e a View posicionada.
+    - Valor em dp (pode usar @dimen/... também).
+
+- app:layout_constraintCircleAngle
+    - Ângulo em graus, medido a partir do eixo horizontal (0° é para a direita).
+    - Aumenta no sentido horário: 90° em cima, 180° à esquerda, 270° embaixo.
+
+-->

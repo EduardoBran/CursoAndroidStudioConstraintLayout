@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Centralizado com wrap_content -->
+    <TextView
+        android:id="@+id/textview_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World A!"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+
+*** Bias
+
+- Bias em ConstraintLayout é um valor percentual (entre 0 e 1) que define como uma View deve
+se posicionar entre duas restrições opostas.
+    - 0 significa alinhar totalmente junto à primeira restrição (por exemplo, Start ou Top).
+    - 1 significa alinhar totalmente junto à segunda restrição (por exemplo, End ou Bottom).
+    - 0.5 (valor padrão) posiciona a View exatamente no meio do espaço disponível.
+
+- app:layout_constraintHorizontal_bias
+    - Controla o deslocamento horizontal da View entre as restrições Start e End.
+    - Por exemplo, com 0.2 ela ficará a 20% do caminho a partir da borda Start rumo à borda End.
+
+- app:layout_constraintVertical_bias
+    - Controla o deslocamento vertical da View entre as restrições Top e Bottom.
+    -Por exemplo, com 0.8 ela ficará a 80% do caminho a partir da borda Top rumo à borda Bottom.
+
+-->
