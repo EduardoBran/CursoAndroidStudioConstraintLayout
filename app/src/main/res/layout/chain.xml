@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Chain (corrente) -->
+
+    <!-- Row 1: Botão C e Botão D com chainStyle="spread" (Padrão) -->
+    <Button
+        android:id="@+id/button_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button A"
+        app:layout_constraintEnd_toStartOf="@+id/button_B"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/button_A"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Row 2: Botão C e Botão D com chainStyle="packed" -->
+    <Button
+        android:id="@+id/button_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button C"
+        app:layout_constraintEnd_toStartOf="@+id/button_D"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_A" />
+
+    <Button
+        android:id="@+id/button_D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/button_C"
+        app:layout_constraintTop_toBottomOf="@+id/button_B" />
+
+    <!-- Row 3: Botão E e Botão F com chainStyle="spread_inside" -->
+    <Button
+        android:id="@+id/button_E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button E"
+        app:layout_constraintEnd_toStartOf="@+id/button_F"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_C" />
+
+    <Button
+        android:id="@+id/button_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/button_E"
+        app:layout_constraintTop_toBottomOf="@+id/button_D" />
+
+    <!-- Row 5: Botão G e Botão H com chainStyle="spread" (Padrão) e width 0dp -->
+    <Button
+        android:id="@+id/button_G"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button G"
+        app:layout_constraintEnd_toStartOf="@+id/button_H"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_E" />
+
+    <Button
+        android:id="@+id/button_H"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button H"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/button_G"
+        app:layout_constraintTop_toBottomOf="@+id/button_F" />
+
+    <!-- Row 6: Botão I e Botão J com constraintHorizontal_weight  -->
+    <Button
+        android:id="@+id/button_I"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button I"
+        app:layout_constraintEnd_toStartOf="@+id/button_J"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_G" />
+
+    <Button
+        android:id="@+id/button_J"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button J"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/button_I"
+        app:layout_constraintTop_toBottomOf="@+id/button_H" />
+
+
+    <!-- Row 7: Botões K, L e M em Vertical Chain com spread_inside -->
+    <Button
+        android:id="@+id/button_K"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button K"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_I"
+        app:layout_constraintBottom_toTopOf="@id/button_L"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/button_L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button L"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_K"
+        app:layout_constraintBottom_toTopOf="@id/button_M" />
+
+    <Button
+        android:id="@+id/button_M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button M"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_L"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+
+    *** Chain
+
+    -->
