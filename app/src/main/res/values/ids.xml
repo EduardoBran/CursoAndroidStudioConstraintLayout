@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="textview_B" type="id">textview_B</item>
-    <item name="textview_E" type="id">textview_E</item>
-    <item name="textview_F" type="id">textview_F</item>
-    <item name="textview_G" type="id">textview_G</item>
-    <item name="textview_H" type="id">textview_H</item>
-</resources>
