@@ -13,128 +13,188 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp">
 
-
-        <TextView
-            android:id="@+id/textview_name"
+        <View
+            android:id="@+id/view_top"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Olá, nome e sobrenome!"
-            android:textSize="18sp"
+            android:layout_height="128dp"
+            android:background="@color/brown"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textview_learn_today"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="O que vamos aprender hoje?"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textview_name" />
-
         <ImageView
-            android:id="@+id/imageview_development"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:contentDescription="Image development"
-            android:src="@drawable/image_development"
-            app:layout_constraintEnd_toStartOf="@+id/imageview_design"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_learn_today" />
-
-        <ImageView
-            android:id="@+id/imageview_design"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:contentDescription="Image design"
-            android:src="@drawable/image_design"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageview_development"
-            app:layout_constraintTop_toBottomOf="@+id/textview_learn_today" />
-
-
-        <ImageView
-            android:id="@+id/imageview_ai"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:contentDescription="Image ai"
-            android:src="@drawable/image_ai"
-            app:layout_constraintEnd_toStartOf="@+id/imageview_explore"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageview_development" />
-
-
-        <ImageView
-            android:id="@+id/imageview_explore"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:contentDescription="Image explore"
-            android:src="@drawable/image_explore"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageview_ai"
-            app:layout_constraintTop_toBottomOf="@+id/imageview_design" />
-
+            android:id="@+id/imageview_arrow_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/desc_arrow_back"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="@+id/view_top"
+            app:layout_constraintTop_toTopOf="@+id/view_top"
+            app:tint="@color/white" />
 
         <TextView
-            android:id="@+id/textview_popular_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Cursos populares"
-            android:textSize="18sp"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/ingredient_title"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_top"
+            app:layout_constraintEnd_toEndOf="@+id/view_top"
+            app:layout_constraintStart_toStartOf="@+id/view_top"
+            app:layout_constraintTop_toTopOf="@+id/view_top" />
+
+        <ImageView
+            android:id="@+id/imageview_timer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/desc_timer"
+            android:src="@drawable/ic_timer"
+            app:layout_constraintEnd_toStartOf="@+id/imageview_heart"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageview_ai" />
+            app:layout_constraintTop_toBottomOf="@+id/view_top"
+            app:tint="@color/brown" />
+
+        <ImageView
+            android:id="@+id/imageview_heart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/desc_heart"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview_timer"
+            app:layout_constraintTop_toBottomOf="@+id/view_top"
+            app:tint="@color/brown" />
 
         <TextView
-            android:id="@+id/textview_see_all"
+            android:id="@+id/textview_15_minutes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Ver todos"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageview_ai" />
+            android:fontFamily="@font/work_sans"
+            android:text="@string/fiften_minutes"
+            app:layout_constraintEnd_toEndOf="@+id/imageview_timer"
+            app:layout_constraintStart_toStartOf="@+id/imageview_timer"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_timer" />
+
+        <TextView
+            android:id="@+id/textview_number_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/number_likes"
+            app:layout_constraintEnd_toEndOf="@id/imageview_heart"
+            app:layout_constraintStart_toStartOf="@id/imageview_heart"
+            app:layout_constraintTop_toBottomOf="@id/imageview_heart" />
 
         <View
-            android:id="@+id/view_courses"
+            android:id="@+id/view_line"
             android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/image_background"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/brown"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_popular_course" />
+            app:layout_constraintTop_toBottomOf="@+id/textview_15_minutes" />
 
         <TextView
-            android:id="@+id/textview_android_development"
+            android:id="@+id/recipe_ingredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/recipe_ingredient"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+        <TextView
+            android:id="@+id/ingredients"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Desenvolvimento Android"
-            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/work_sans_bold"
+            android:text="@string/ingredients"
+            android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/view_courses"
-            app:layout_constraintStart_toStartOf="@+id/view_courses"
-            app:layout_constraintTop_toTopOf="@+id/view_courses" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_ingredient" />
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_android"
-            app:layout_constraintBottom_toBottomOf="@+id/view_courses"
-            app:layout_constraintEnd_toEndOf="@+id/view_courses"
-            app:layout_constraintTop_toTopOf="@+id/view_courses"
-            app:tint="@color/white" />
+            android:id="@+id/arrow_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/desc_arrow_right"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients"
+            app:tint="@color/brown" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/express_quantity"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/arrow_right1"
+            app:layout_constraintStart_toEndOf="@+id/arrow_right1"
+            app:layout_constraintTop_toTopOf="@id/arrow_right1" />
+
+        <ImageView
+            android:id="@+id/arrow_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/desc_arrow_right"
+            android:fontFamily="@font/work_sans"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrow_right1"
+            app:tint="@color/brown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/milk_quantity"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/arrow_right2"
+            app:layout_constraintStart_toEndOf="@+id/arrow_right2"
+            app:layout_constraintTop_toTopOf="@id/arrow_right2" />
+
+        <ImageView
+            android:id="@+id/arrow_right3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/desc_arrow_right"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrow_right2"
+            app:tint="@color/brown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="@string/chocolate_quantity"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/arrow_right3"
+            app:layout_constraintStart_toEndOf="@+id/arrow_right3"
+            app:layout_constraintTop_toTopOf="@id/arrow_right3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

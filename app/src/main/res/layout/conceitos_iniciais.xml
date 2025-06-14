@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="@id/textview_D"
         app:layout_constraintTop_toBottomOf="@id/textview_D"/>
 
-    <!-- elemento a direita de textview_D e alinhado ao elemento com baseline -->
+    <!-- elemento a direita de textview_G e alinhado ao elemento com baseline -->
     <TextView
         android:id="@+id/textview_H"
         android:layout_width="wrap_content"

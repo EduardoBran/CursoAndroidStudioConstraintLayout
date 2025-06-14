@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">CursoConstraintLayout</string>
+
+    <string name="ingredient_title">Cappuccino</string>
+    <string name="fiften_minutes">15 minutos</string>
+    <string name="number_likes">52214</string>
+    <string name="recipe_ingredient">
+        Uma simples e perfeitamente extraída dose de expresso misturado com leite fresco e chocolate fazem esta bebida deliciosa.
+    </string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="express_quantity">1 dose expresso</string>
+    <string name="milk_quantity">100ml leite</string>
+    <string name="chocolate_quantity">1 colher de chocolate em pó</string>
+
+
+    <string name="desc_arrow_back">Arrow back</string>
+    <string name="desc_timer">Timer</string>
+    <string name="desc_heart">Heart</string>
+    <string name="desc_arrow_right">Arrow right</string>
+
 </resources>
