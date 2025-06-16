@@ -10,8 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp">
+        android:layout_height="wrap_content" >
 
         <View
             android:id="@+id/view_top"
@@ -108,9 +107,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/work_sans"
             android:gravity="center"
-            android:padding="18dp"
+            android:padding="16dp"
             android:text="@string/recipe_ingredient"
-            android:textSize="15sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_line" />
@@ -133,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:contentDescription="@string/desc_arrow_right"
             android:src="@drawable/ic_arrow_right"
             app:layout_constraintStart_toStartOf="parent"
@@ -155,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:contentDescription="@string/desc_arrow_right"
             android:fontFamily="@font/work_sans"
             android:src="@drawable/ic_arrow_right"
@@ -178,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/desc_arrow_right"
             android:src="@drawable/ic_arrow_right"
